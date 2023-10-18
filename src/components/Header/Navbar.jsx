@@ -1,23 +1,25 @@
 import { Link, NavLink } from "react-router-dom";
-import { AiOutlineMenu} from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
 import { useState } from "react";
 
 
 const Navbar = () => {
-    const [menu,setMenu] = useState(false);
+    const [open,setOpen] =useState(false)
     return (
         <div>
-            <nav className="flex justify-between items-center py-4 shadow-lg px-4 relative ">
-                <div className="flex items-center gap-4">
-                    <button onClick={() => setMenu(!menu)} className="md:hidden"><AiOutlineMenu></AiOutlineMenu></button>
-                    <h1>Electronics</h1>
-                </div>
-                <ul className={`md:flex absolute ml-0 duration-500 md:static justify-between items-center gap-6 ${menu? 'block top-10  shadow-lg md:shadow-none text-black':'hidden -top-20'}`}>
+            <nav className="flex justify-between items-center py-4 bg-yellow-100 shadow-lg px-4 relative ">
+                <div className="flex items-center gap-4 md:hidden text-2xl" onClick={() => setOpen(!open)}>
+                    {
+                        open === true? <AiOutlineClose></AiOutlineClose> : <AiOutlineMenu></AiOutlineMenu>
+                    }
+                    </div>
+                    <img className="w-40 md:w-60 " src="https://i.ibb.co/M8QPwz2/aro-store.png" alt="" />
+                <ul className={`md:flex absolute  duration-500 md:static justify-between items-center gap-6 ${open ? 'top-16 bg-yellow-100':'-top-60'} `}>
                     <li className="text-2xl font-semibold px-3 my-8 ">
                         <NavLink
                             to="/"
                             className={({ isActive, isPending }) =>
-                                isPending ? " " : isActive ? "text-2xl bg-blue-500 px-2 py-2 rounded-md font-semibold" : "hover:bg-blue-200 px-2 py-2 rounded-md"
+                                isPending ? " " : isActive ? "text-2xl bg-yellow-500 px-2 py-2 rounded-md font-semibold" : "hover:bg-yellow-200 px-2 py-2 rounded-md"
                             }
                         >
                             Home
@@ -27,7 +29,7 @@ const Navbar = () => {
                         <NavLink
                             to="/add"
                             className={({ isActive, isPending }) =>
-                                isPending ? "" : isActive ? "text-2xl bg-blue-500 px-2 py-2 rounded-md font-semibold" : "hover:bg-blue-200 px-2 py-2 rounded-md"
+                                isPending ? "" : isActive ? "text-2xl bg-yellow-500 px-2 py-2 rounded-md font-semibold" : "hover:bg-yellow-200 px-2 py-2 rounded-md"
                             }
                         >
                             Add Product
@@ -37,14 +39,14 @@ const Navbar = () => {
                         <NavLink
                             to="/about"
                             className={({ isActive, isPending }) =>
-                                isPending ? "" : isActive ? "text-2xl bg-blue-500 px-2 py-2 font-semibold rounded-md" : "hover:bg-blue-200 px-2 py-2 rounded-md"
+                                isPending ? "" : isActive ? "text-2xl bg-yellow-500 px-2 py-2 font-semibold rounded-md" : "hover:bg-yellow-200 px-2 py-2 rounded-md"
                             }
                         >
                             About Us
                         </NavLink>
                     </li>
                 </ul>
-                <div className=""><Link to={'/login'}><button className="bg-blue-500 px-6 py-4 rounded-lg text-2xl">Login</button></Link></div>
+                <div className=""><Link to={'/login'}><button className="bg-yellow-500 px-6 py-4 rounded-lg text-2xl font-bold">Login</button></Link></div>
             </nav>
         </div>
     );
