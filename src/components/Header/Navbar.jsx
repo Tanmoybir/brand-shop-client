@@ -1,10 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 
 const Navbar = () => {
+    const {user,logOut} = useContext(AuthContext)
     const [open,setOpen] =useState(false)
+    // console.log(user);
     return (
         <div>
             <nav className="flex justify-between items-center py-4 bg-yellow-100 shadow-lg px-4 relative ">
@@ -46,7 +49,34 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                 </ul>
-                <div className=""><Link to={'/login'}><button className="bg-yellow-500 px-6 py-4 rounded-lg text-2xl font-bold">Login</button></Link></div>
+                <div className="">
+                {
+                        user?.email ? <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src={user.photoURL} alt={user.displayName} />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                    <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
+
+                                </li>
+                                <li>
+                                    <button className="btn btn-sm  btn-ghost"
+                                        onClick={logOut}
+                                    >Logout</button>
+
+                                </li>
+                            </ul>
+                        </div>
+                            :
+                            <Link to='/login'>
+                                <button className="bg-yellow-500 px-6 py-4 rounded-lg text-2xl font-bold">Login</button>
+                            </Link>
+                    }
+                    {/* <Link to={'/login'}><button className="bg-yellow-500 px-6 py-4 rounded-lg text-2xl font-bold">Login</button></Link> */}
+                    </div>
             </nav>
         </div>
     );

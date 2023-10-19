@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Update from "../pages/Update/Update";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 
 const myCreateRouter = createBrowserRouter([
@@ -37,7 +38,9 @@ const myCreateRouter = createBrowserRouter([
             },
             {
                 path:'/update',
-                element:<Update></Update>
+                element:<PrivateRoute>
+                    <Update></Update>
+                </PrivateRoute>
             }
 
         ]
