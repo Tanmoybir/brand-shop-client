@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className="max-w-screen-xl mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Toaster></Toaster>

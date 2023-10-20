@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/Nnx1CqF/samsung.jpg",
+      "brand_name": "SAMSUNG"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/4fSGX7n/apple-3.jpg",
+      "brand_name": "APPLE"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/0jjMcgX/sony.jpg",
+      "brand_name": "SONY"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/hmwrhXb/hp-1.jpg",
+      "brand_name": "HP"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/gSSnV6m/lenovo-1.png",
+      "brand_name": "LENOVO"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/G2p90bg/hitachi.jpg",
+      "brand_name": "HITACHI"
+    }
+  ]

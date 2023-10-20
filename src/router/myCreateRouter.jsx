@@ -8,6 +8,7 @@ import Register from "../pages/Register/Register";
 import Update from "../pages/Update/Update";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from "../privateRoute/PrivateRoute";
+import Contact from "../pages/Contact/Contact";
 
 
 const myCreateRouter = createBrowserRouter([
@@ -18,7 +19,8 @@ const myCreateRouter = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader:() => fetch('/brands.json')
             },
             {
                 path:'/about',
@@ -41,7 +43,12 @@ const myCreateRouter = createBrowserRouter([
                 element:<PrivateRoute>
                     <Update></Update>
                 </PrivateRoute>
+            },
+            {
+                path:'/contact',
+                element:<Contact></Contact>
             }
+           
 
         ]
     }

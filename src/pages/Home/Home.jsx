@@ -1,11 +1,17 @@
-import ErrorPage from "../ErrorPage/ErrorPage";
+
+import { useLoaderData } from "react-router-dom";
+import Brand from "./bRAND.JSX";
+
 
 
 const Home = () => {
+   const brands = useLoaderData()
+    
     return (
-        <div>
-            <h1>This is Home</h1> 
-            <ErrorPage></ErrorPage>
+        <div className="px-2">
+           
+            <Brand brands={brands}></Brand>
+            
         </div>
     );
 };
