@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../../components/Social/SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import toast from "react-hot-toast";
+import Swal from 'sweetalert2'
 
 
 const Register = () => {
 
-    const { createUser } =useContext(AuthContext)
+    const { createUser,profileUpdate } =useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -21,13 +22,42 @@ const Register = () => {
 
 
         if (password.length < 6){
-            toast.error('Password must be at least 6 characters');
+            Swal.fire({
+                title: 'Error!',
+                text: 'Password must be at least 6 characters',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+            
             return
         }
 
         createUser(email,password)
-        .then(res => console.log(res.user))
-        .catch(error => console.log(error))
+        .then(res => {
+            profileUpdate(name,image)
+            .then(() => {
+                console.log(res.user);
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User Created Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+                  form.reset()
+                  navigate('/')
+            })
+        })
+        .catch(error => {
+            console.log(error)
+            const mistake = error.message
+            Swal.fire({
+                title: 'Error!',
+                text: mistake,
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+              form.reset()
+        })
 
 
 
