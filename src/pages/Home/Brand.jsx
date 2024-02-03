@@ -1,12 +1,8 @@
-
-
 import BrandCard from "./BrandCard";
 
 
 const Brand = ({brands}) => {
    
-
- 
     return (
         <div className="my-10">
           

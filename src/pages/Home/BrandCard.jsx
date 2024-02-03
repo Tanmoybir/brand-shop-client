@@ -6,7 +6,7 @@ const BrandCard = ({ brand }) => {
     
     return (
         <div className="flex justify-center items-center">
-            <Link to={`/brands/${id}`}>
+            <Link to={`/brands/${brand_name}`}>
             <div className="relative flex flex-col text-gray-700 bg-white shadow-md lg:w-[400px] rounded-xl bg-clip-border">
                 <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
                     <img className="w-full h-full" src={image} alt="profile-picture" />
