@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Products = ({ product }) => {
     console.log(product);
@@ -6,7 +7,7 @@ const Products = ({ product }) => {
     return (
         <div className="mt-20 mx-2 md:mx-4 flex items-center justify-center">
             <div className="relative flex w-full max-w-[50rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+                <div className="relative m-0 h-80  shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
                     <img
                         src={image}
                         alt="image"
@@ -34,3 +35,6 @@ const Products = ({ product }) => {
 };
 
 export default Products;
+Products.propTypes = {
+    product: PropTypes.object
+}

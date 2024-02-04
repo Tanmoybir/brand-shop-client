@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 const BrandCard = ({ brand }) => {
-    const { id, image, brand_name } = brand
+    const { image, brand_name } = brand
     
     return (
         <div className="flex justify-center items-center">
@@ -25,3 +25,6 @@ const BrandCard = ({ brand }) => {
 };
 
 export default BrandCard;
+BrandCard.propTypes = {
+    brand: PropTypes.object
+}

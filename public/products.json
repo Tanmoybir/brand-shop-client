@@ -1,0 +1,302 @@
+[
+    {
+        "name": "iPhone 15",
+        "brand_name": "APPLE",
+        "type": "Phone",
+        "price": 999.99,
+        "description": "The latest iPhone with advanced features.",
+        "rating": 4.8,
+        "image": "https://i.ibb.co/VYpQfYK/i-phone-15pro.jpg",
+        "details_img": "https://i.ibb.co/QvRgDzt/i-phone-15pro-1.jpg"
+    },
+    {
+        "name": "MacBook Pro",
+        "brand_name": "APPLE",
+        "type": "Computer",
+        "price": 1499.99,
+        "description": "Powerful laptop for professional use.",
+        "rating": 4.9,
+        "image": "https://i.ibb.co/XYXYzwJ/Mac-Book-Pro2.jpg",
+        "details_img": "https://i.ibb.co/376rxtm/Mac-Book-Pro1.jpg"
+    },
+    {
+        "name": "AirPods Pro",
+        "brand_name": "APPLE",
+        "type": "Headphone",
+        "price": 249.99,
+        "description": "Premium wireless earbuds with noise cancellation.",
+        "rating": 4.7,
+        "image": "https://i.ibb.co/ZLmF5YX/Air-Pods-Pro1.jpg",
+        "details_img": "https://i.ibb.co/z2PXRtn/Air-Pods-Pro2.jpg"
+    },
+    {
+        "name": "iPad Air",
+        "brand_name": "APPLE",
+        "type": "Tablet",
+        "price": 699.99,
+        "description": "Slim and powerful tablet for productivity and entertainment.",
+        "rating": 4.6,
+        "image": "https://i.ibb.co/4sD77LD/i-Pad-Air1.jpg",
+        "details_img": "https://i.ibb.co/vV0Z4Lq/i-Pad-Air2.jpg"
+    },
+    {
+        "name": "Apple Watch Series 7",
+        "brand_name": "APPLE",
+        "type": "Wearable",
+        "price": 399.99,
+        "description": "Smartwatch with advanced health and fitness features.",
+        "rating": 4.8,
+        "image": "https://i.ibb.co/dL12dcd/Apple-Watch-Series-7.jpg",
+        "details_img": "https://i.ibb.co/9wL8W1K/Apple-Watch-Series-7-1.jpg"
+    },
+    {
+        "name": "Galaxy S24",
+        "brand_name": "SAMSUNG",
+        "type": "Phone",
+        "price": 1099.99,
+        "description": "Flagship smartphone with cutting-edge technology.",
+        "rating": 4.9,
+        "image": "https://i.ibb.co/m86trRQ/Galaxy-S24.jpg",
+        "details_img": "https://i.ibb.co/bNbkmH7/Galaxy-S24-2.jpg"
+    },
+    {
+        "name": "Samsung Galaxy Book Pro",
+        "brand_name": "SAMSUNG",
+        "type": "Computer",
+        "price": 1299.99,
+        "description": "Ultra-lightweight laptop for on-the-go professionals.",
+        "rating": 4.8,
+        "image": "https://i.ibb.co/RcSnndG/Samsung-Galaxy-Book-Pro.jpg",
+        "details_img": "https://i.ibb.co/zXXm2nB/Samsung-Galaxy-Book-Pro-1.jpg"
+    },
+    {
+        "name": "Galaxy Buds Pro",
+        "brand_name": "SAMSUNG",
+        "type": "Headphone",
+        "price": 199.99,
+        "description": "Wireless earbuds with immersive sound and active noise cancellation.",
+        "rating": 4.7,
+        "image": "https://i.ibb.co/0yJb6ZK/Galaxy-Buds-Pro.jpg",
+        "details_img": "https://i.ibb.co/Zm5snL2/Galaxy-Buds-Pro-1.jpg"
+    },
+    {
+        "name": "Samsung QLED 4K Smart TV",
+        "brand_name": "SAMSUNG",
+        "type": "TV",
+        "price": 1499.99,
+        "description": "High-quality QLED TV with smart features.",
+        "rating": 4.6,
+        "image": "https://i.ibb.co/6vLkds1/Samsung-QLED-4-K-Smart-TV.jpg",
+        "details_img": "https://i.ibb.co/NVjyXsn/Samsung-QLED-4-K-Smart-TV-1.jpg"
+    },
+    {
+        "name": "Samsung Galaxy Watch 4",
+        "brand_name": "SAMSUNG",
+        "type": "Wearable",
+        "price": 349.99,
+        "description": "Smartwatch with advanced health tracking and fitness features.",
+        "rating": 4.7,
+        "image": "https://i.ibb.co/MP4T8SZ/Samsung-Galaxy-Watch-4.jpg",
+        "details_img": "https://i.ibb.co/CznRLjT/Samsung-Galaxy-Watch-4-1.jpg"
+    },
+    {
+        "name": "ThinkPad X1 Carbon",
+        "brand_name": "LENOVO",
+        "type": "Computer",
+        "price": 1699.99,
+        "description": "Premium business laptop with powerful performance.",
+        "rating": 4.9,
+        "image": "https://i.ibb.co/rchj1zZ/Think-Pad-X1-Carbon.jpg",
+        "details_img": "https://i.ibb.co/vLWjGT7/Think-Pad-X1-Carbon-2.jpg"
+    },
+    {
+        "name": "Legion 5 Gaming Laptop",
+        "brand_name": "LENOVO",
+        "type": "Computer",
+        "price": 1299.99,
+        "description": "High-performance gaming laptop for gamers.",
+        "rating": 4.8,
+        "image": "https://i.ibb.co/8PVYKmx/Legion-5-Gaming-Laptop.jpg",
+        "details_img": "https://i.ibb.co/KXQdz9P/Legion-5-Gaming-Laptop-1.jpg"
+    },
+    {
+        "name": "Yoga C940 2-in-1 Laptop",
+        "brand_name": "LENOVO",
+        "type": "Computer",
+        "price": 1299.99,
+        "description": "Versatile 2-in-1 laptop with a touchscreen display.",
+        "rating": 4.7,
+        "image": "https://i.ibb.co/B33yDg7/Yoga-C940-2-in-1-Laptop.jpg",
+        "details_img": "https://i.ibb.co/bXtPCYc/Yoga-C940-2-in-1-Laptop-1.jpg"
+    },
+    {
+        "name": "Smart Tab M10 Plus",
+        "brand_name": "LENOVO",
+        "type": "Tablet",
+        "price": 299.99,
+        "description": "Android tablet with a family-friendly design.",
+        "rating": 4.6,
+        "image": "https://i.ibb.co/Bwxh5jR/Smart-Tab-M10-Plus.jpg",
+        "details_img": "https://i.ibb.co/Bwxh5jR/Smart-Tab-M10-Plus.jpg"
+    },
+    {
+        "name": "Legion H500 Pro Gaming Headset",
+        "brand_name": "LENOVO",
+        "type": "Headphone",
+        "price": 79.99,
+        "description": "Immersive gaming headset with 7.1 surround sound.",
+        "rating": 4.5,
+        "image": "https://i.ibb.co/ZdXRB7y/Legion-H500-Pro-Gaming-Headset.jpg",
+        "details_img": "https://i.ibb.co/Zc8QcQ6/Legion-H500-Pro-Gaming-Headset-1.jpg"
+    },
+    {
+        "name": "Ultra HD Smart TV",
+        "brand_name": "HITACHI",
+        "type": "TV",
+        "price": 899.99,
+        "description": "4K Smart TV with vibrant colors and smart features.",
+        "rating": 4.7,
+        "image": "https://i.ibb.co/mShXdhJ/Ultra-HD-Smart-TV.jpg",
+        "details_img": "https://i.ibb.co/GVjkpKd/Ultra-HD-Smart-TV-1.jpg"
+    },
+    {
+        "name": "Hitachi Refrigerator",
+        "brand_name": "HITACHI",
+        "type": "Appliance",
+        "price": 999.99,
+        "description": "Energy-efficient refrigerator with spacious storage.",
+        "rating": 4.6,
+        "image": "https://i.ibb.co/G24R7Cm/Hitachi-Refrigerator.jpg",
+        "details_img": "https://i.ibb.co/KLtcknj/Hitachi-Refrigerator-1.jpg"
+    },
+    {
+        "name": "Portable Air Conditioner",
+        "brand_name": "HITACHI",
+        "type": "Appliance",
+        "price": 349.99,
+        "description": "Compact and portable air conditioner for cooling flexibility.",
+        "rating": 4.5,
+        "image": "https://i.ibb.co/jb5sPhC/Portable-Air-Conditioner.jpg",
+        "details_img": "https://i.ibb.co/Hxq0t3b/Portable-Air-Conditioner-2.jpg"
+    },
+    {
+        "name": "Digital Camera D5600",
+        "brand_name": "HITACHI",
+        "type": "Camera",
+        "price": 649.99,
+        "description": "High-quality DSLR camera for photography enthusiasts.",
+        "rating": 4.8,
+        "image": "https://i.ibb.co/23NqGLn/Digital-Camera-D5600.jpg",
+        "details_img": "https://i.ibb.co/Qd8PJxn/Digital-Camera-D5600-1.jpg"
+    },
+    {
+        "name": "Hitachi Washer and Dryer Combo",
+        "brand_name": "HITACHI",
+        "type": "Appliance",
+        "price": 799.99,
+        "description": "All-in-one washer and dryer combo for convenient laundry.",
+        "rating": 4.6,
+        "image": "https://i.ibb.co/98qrZVK/Hitachi-Washer-and-Dryer-Combo.jpg",
+        "details_img": "https://i.ibb.co/98qrZVK/Hitachi-Washer-and-Dryer-Combo.jpg"
+    },
+    {
+        "name": "Xperia 1 III",
+        "brand_name": "SONY",
+        "type": "Phone",
+        "price": 1199.99,
+        "description": "Premium smartphone with advanced camera technology.",
+        "rating": 4.9,
+        "image": "https://i.ibb.co/rmNVjqD/Xperia-1-III.jpg",
+        "details_img": "https://i.ibb.co/Sd0Zx20/Xperia-1-III-1.jpg"
+    },
+    {
+        "name": "Sony BRAVIA OLED 4K Smart TV",
+        "brand_name": "SONY",
+        "type": "TV",
+        "price": 1799.99,
+        "description": "OLED 4K TV with stunning picture quality.",
+        "rating": 4.8,
+        "image": "https://i.ibb.co/L1dLtMc/Sony-BRAVIA-OLED-4-K-Smart-TV.jpg",
+        "details_img": "https://i.ibb.co/PxFqnd9/Sony-BRAVIA-OLED-4-K-Smart-TV-1.jpg"
+    },
+    {
+        "name": "WH-1000XM4 Wireless Headphones",
+        "brand_name": "SONY",
+        "type": "Headphone",
+        "price": 349.99,
+        "description": "Premium noise-canceling headphones for an immersive audio experience.",
+        "rating": 4.7,
+        "image": "https://i.ibb.co/1TnBKdC/WH-1000-XM4-Wireless-Headphones.jpg",
+        "details_img": "https://i.ibb.co/cwgp6wG/WH-1000-XM4-Wireless-Headphones-1.jpg"
+    },
+    {
+        "name": "PlayStation 5",
+        "brand_name": "SONY",
+        "type": "Gaming Console",
+        "price": 499.99,
+        "description": "Next-gen gaming console for a powerful gaming experience.",
+        "rating": 4.9,
+        "image": "https://i.ibb.co/kGhNpyv/Play-Station-5.jpg",
+        "details_img": "https://i.ibb.co/Q83BDdf/Play-Station-5-1.jpg"
+    },
+    {
+        "name": "Sony Alpha a7 III Mirrorless Camera",
+        "brand_name": "SONY",
+        "type": "Camera",
+        "price": 1999.99,
+        "description": "Mirrorless camera with exceptional image quality.",
+        "rating": 4.8,
+        "image": "https://i.ibb.co/hdQrx1K/Sony-Alpha-a7-III-Mirrorless-Camera.jpg",
+        "details_img": "https://i.ibb.co/hdQrx1K/Sony-Alpha-a7-III-Mirrorless-Camera.jpg"
+    },
+    {
+        "name": "HP Spectre x360",
+        "brand_name": "HP",
+        "type": "Computer",
+        "price": 1299.99,
+        "description": "Convertible laptop with a sleek design and powerful performance.",
+        "rating": 4.8,
+        "image": "https://i.ibb.co/SrW5WzP/HP-Spectre-x360.jpg",
+        "details_img": "https://i.ibb.co/s2YSwGk/HP-Spectre-x360-1.jpg"
+    },
+    {
+        "name": "HP ENVY Photo 7155 All-in-One Printer",
+        "brand_name": "HP",
+        "type": "Printer",
+        "price": 149.99,
+        "description": "All-in-one printer for high-quality photo printing.",
+        "rating": 4.6,
+        "image": "https://i.ibb.co/g6LT15L/HP-ENVY-Photo-7155-All-in-One-Printer.jpg",
+        "details_img": "https://i.ibb.co/sst4tcf/HP-ENVY-Photo-7155-All-in-One-Printer-1.jpg"
+    },
+    {
+        "name": "Omen 15 Gaming Laptop",
+        "brand_name": "HP",
+        "type": "Computer",
+        "price": 1399.99,
+        "description": "Powerful gaming laptop with a high-refresh-rate display.",
+        "rating": 4.7,
+        "image": "https://i.ibb.co/S0mPdsc/Omen-15-Gaming-Laptop.jpg",
+        "details_img": "https://i.ibb.co/XYPq1j3/Omen-15-Gaming-Laptop-1.jpg"
+    },
+    {
+        "name": "HP 27f 27-inch Monitor",
+        "brand_name": "HP",
+        "type": "Monitor",
+        "price": 249.99,
+        "description": "Full HD monitor with vibrant colors and slim design.",
+        "rating": 4.5,
+        "image": "https://i.ibb.co/0Fc7tRR/HP-27f-27-inch-Monitor.jpg",
+        "details_img": "https://i.ibb.co/FHCP3px/HP-27f-27-inch-Monitor-1.jpg"
+    },
+    {
+        "name": "HP Pavilion Wireless Keyboard and Mouse Combo",
+        "brand_name": "HP",
+        "type": "Accessory",
+        "price": 49.99,
+        "description": "Wireless keyboard and mouse combo for comfortable computing.",
+        "rating": 4.6,
+        "image": "https://i.ibb.co/9r4T06f/HP-Pavilion-Wireless-Keyboard-and-Mouse-Combo.jpg",
+        "details_img": "https://i.ibb.co/jkyJp8m/HP-Pavilion-Wireless-Keyboard-and-Mouse-Combo-1.jpg"
+    }
+]
