@@ -1,32 +1,47 @@
 import { useLoaderData } from "react-router-dom";
+import { auth } from "../../firebase/firebaseConfig";
+import toast from "react-hot-toast";
 
 
 const ProductDetails = () => {
     const product = useLoaderData()
     // console.log(product);
-    const { image, productName, description, price, rating, type } = product
+    const { image, details_img, name, description, price, rating, type } = product
+    const email = auth.currentUser.email
+    // console.log(email);
+    const addCart = { email, image, name, price}
+    const handleAddCart = () => {
+        fetch('http://localhost:5000/myCarts', {
+            method: "POST",
+            headers: {
+                "content-type": 'application/json'
+            },
+            body:JSON.stringify(addCart)
+
+        })
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data);
+            if(data.acknowledged){
+                toast.success('Added MY Cart Successfully')
+            }
+        })
+    }
     return (
-        <div className="max-[350px] md:w-[350px] bg-slate-300/20 px-6 py-4 mx-auto rounded-2xl space-y-6 shadow-md">
-            {/* Card Image */}
-            <img className="w-[350px] h-[190px] bg-gray-400 rounded-2xl" src={image} alt="" />
-            {/* Card Heading */}
-            <div className="space-y-2">
-                <h2 className="text-slate-800 font-medium md:text-xl sm:text-lg ">{productName}</h2>
-                <h2 className="text-slate-800 font-medium md:text-xl sm:text-lg ">{description}</h2>
-                {/* rating  */}
-                <div className="flex gap-1">
-                    {[...Array(5)].map((_, index) => (
-                        <svg key={index} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1E293B" stroke="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                    ))}
-                </div>
+        <div className="flex flex-col md:flex-row items-center shadow-lg p-5 max-w-3xl mx-auto gap-5 my-10">
+            {/* image */}
+            <div className="h-[500px] w-full bg-green-500 flex-1 rounded-3xl overflow-hidden ">
+                <img src={details_img} alt="" className="w-full h-full object-cover " />
             </div>
-            {/* Price and action button */}
-            <div className="mt-5 flex justify-between items-center font-medium">
-                <h2 className="md:text-xl text-gray-800">${price}</h2>
-                <button className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semibold md:text-base sm:text-sm text-[12px] hover:bg-slate-900">Add to Cart</button>
+            {/* text */}
+            <div className="flex-1 space-y-5">
+                <h3 className="text-2xl font-semibold ">{name}</h3>
+                <p className="text-sm rounded-lg text-center p-2 bg-gray-700 text-white">Category: {type}</p>
+                <p className="text-sm text-gray-500">{description}</p>
+                <h2 className="text-2xl font-medium text-center">${price}</h2>
+                <button onClick={handleAddCart} className="bg-gray-900 text-white px-6 py-2 w-full rounded-lg font-semibold md:text-base sm:text-sm text-[12px] hover:bg-slate-900">Add to Cart</button>
             </div>
+
         </div>
     );
 };

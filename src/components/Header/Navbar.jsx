@@ -17,7 +17,7 @@ const Navbar = () => {
                     }
                     </div>
                     <img className="w-40 md:w-60 " src="https://i.ibb.co/M8QPwz2/aro-store.png" alt="" />
-                <ul className={`lg:flex absolute  duration-500 lg:static justify-between items-center gap-6  ${open ? 'top-16 -left-10 px-5 bg-yellow-100 z-10':'-top-60'} `}>
+                <ul className={`lg:flex absolute  duration-500 lg:static justify-between items-center gap-6  ${open ? 'top-16 -left-10 px-5 bg-yellow-100 z-10':'-top-72'} `}>
                     <li className="text-2xl font-semibold px-3 my-8 ">
                         <NavLink
                             to="/"
@@ -56,6 +56,17 @@ const Navbar = () => {
                             }
                         >
                             Contact Us
+                        </NavLink>
+                    </li>
+                    {/* My Cart */}
+                    <li className="text-2xl font-semibold px-3 my-4 ">
+                        <NavLink
+                            to="/myCart"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "" : isActive ? "text-2xl bg-yellow-500 px-2 py-2 font-semibold rounded-md" : "hover:bg-yellow-200 px-2 py-2 rounded-md"
+                            }
+                        >
+                            My Cart
                         </NavLink>
                     </li>
                 </ul>
