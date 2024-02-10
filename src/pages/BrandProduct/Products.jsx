@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const Products = ({ product }) => {
-    console.log(product);
+    // console.log(product);
     const { _id, image, productName, brand_name,price } = product
     return (
         <div className="mt-20 mx-2 md:mx-4 flex items-center justify-center">

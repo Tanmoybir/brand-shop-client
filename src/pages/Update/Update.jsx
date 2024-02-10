@@ -1,6 +1,10 @@
-// import Swal from "sweetalert2";
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
+    const product = useLoaderData()
+    const { _id, image, details_img, name, description, price, rating, type, brand_name } = product
+
     const handleUpdateProduct = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -13,28 +17,28 @@ const UpdateProduct = () => {
         const description = form.description.value;
         const rating = form.rating.value;
 
+        
         const updateProducts = { image, details_image, productName, brand_name, type, price, description, rating }
-        console.log(updateProducts);
-        // fetch('http://localhost:5000/brands',{
-        //     method:'post',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body:JSON.stringify(updateProducts)
-        // })
-        // .then(res => res.json())
-        // .then(data => {
-        //     console.log(data);
-        //     if (data.insertedId){
-        //         Swal.fire({
-        //             title: 'Success!',
-        //             text: 'Products Added Successfully',
-        //             icon: 'success',
-        //             confirmButtonText: 'Cool'
-        //           })  
-        //     }
-        // })
-
+        // console.log(updateProducts);
+        fetch(`http://localhost:5000/brands/${_id}`, {
+            method: 'put',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateProducts)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Products Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
     }
     return (
         <div className="mt-5 px-3">
@@ -43,41 +47,41 @@ const UpdateProduct = () => {
                 <h1 className="text-4xl text-white font-bold text-center">UPDATE PRODUCTS</h1>
                 <div className="flex flex-col text-gray-400 py-2">
                     <label>Image</label>
-                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="image" required placeholder="Image URl" id="img" />
+                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="image" defaultValue={image} required placeholder="Image URl" id="img" />
                 </div>
                 <div className="flex flex-col text-gray-400 py-2">
                     <label>Details Image</label>
-                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="details_image" required placeholder="Details Image URl" id="img1" />
+                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="details_image" defaultValue={details_img} required placeholder="Details Image URl" id="img1" />
                 </div>
                 <div className="flex flex-col text-gray-400 py-2">
                     <label>Product Name</label>
-                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="name" placeholder="Product Name" id="product" />
+                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" defaultValue={name} name="name" placeholder="Product Name" id="product" />
                 </div>
                 <div className="flex flex-col text-gray-400 py-2">
                     <label>Brand Name</label>
-                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="brand" placeholder="Brand Name" id="brand" />
+                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" defaultValue={brand_name} name="brand" placeholder="Brand Name" id="brand" />
                 </div>
                 <div className="flex flex-col text-gray-400 py-2">
                     <label>Type</label>
-                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="type" placeholder="Type of Product" id="password" />
+                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" defaultValue={type} name="type" placeholder="Type of Product" id="password" />
 
 
                 </div>
                 <div className="flex flex-col text-gray-400 py-2">
                     <label>Price</label>
-                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="number" name="price" placeholder="Product Price" id="price" />
+                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="number" defaultValue={price} name="price" placeholder="Product Price" id="price" />
 
 
                 </div>
                 <div className="flex flex-col text-gray-400 py-2">
                     <label>Short description</label>
-                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="description" placeholder="Product description" id="description" />
+                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" defaultValue={description} name="description" placeholder="Product description" id="description" />
 
 
                 </div>
                 <div className="flex flex-col text-gray-400 py-2">
                     <label>Rating</label>
-                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" name="rating" placeholder="Rating" id="Rating" />
+                    <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text" defaultValue={rating} name="rating" placeholder="Rating" id="Rating" />
 
 
                 </div>

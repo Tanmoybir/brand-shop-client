@@ -38,10 +38,8 @@ const Login = () => {
                 icon: 'success',
                 confirmButtonText: 'Cool'
               })
-              form.reset()
-              {
-                location?.state? location.state : navigate('/')
-              }
+            //   form.reset()
+              navigate(location?.state? location.state : '/')
         })
         .catch(error => {
             console.log(error)
@@ -80,7 +78,7 @@ const Login = () => {
 
                 </div>
                 <input className="w-full my-5 py-2 bg-teal-500 shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg" type="submit" value="Login" />
-                <p className="text-white">Don't have an account?<Link to={'/register'} className="px-5 text-xl hover:bg-blue-500 rounded-lg">Register</Link></p>
+                <p className="text-white">Don{`'`}t have an account?<Link to={'/register'} className="px-5 text-xl hover:bg-blue-500 rounded-lg">Register</Link></p>
             </form>
 
             {/* Google login */}
