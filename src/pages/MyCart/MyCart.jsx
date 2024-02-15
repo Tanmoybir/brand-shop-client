@@ -1,11 +1,18 @@
-import { useLoaderData } from "react-router-dom";
 import MyCartCard from "./MyCartCard";
-import { useState } from "react";
+import {  useEffect, useState } from "react";
+import { auth } from "../../firebase/firebaseConfig";
 
 const MyCart = () => {
-    const loadedMyCartItem = useLoaderData()
-    const [myCartItem, setMyCartItem] = useState(loadedMyCartItem)
-    //    console.log(myCartItem);
+    const [myCartItem, setMyCartItem] = useState([])
+    const email = auth.currentUser.email
+    useEffect(() => {
+        fetch(`http://localhost:5000/myCarts?email=${email}`)
+        .then(res => res.json())
+        .then(data => {
+            setMyCartItem(data)
+        })
+    }, [email])
+   
     return (
         <div>
             <div className="">
